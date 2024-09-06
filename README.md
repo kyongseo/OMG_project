@@ -13,7 +13,7 @@
 |                                              [전현진](https://github.com/HyeonJinJeon)                                               |                                                [곽유진](https://github.com/jinijavac)                                                |                                                 [손설빈](https://github.com/seolbb)                                                  |                                          [김혜주](https://github.com/kimoju01)                                          |                                                [박경서](https://github.com/kyongseo)                                                 |
 |:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|
 | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://github.com/user-attachments/assets/8d5bb1bb-d84f-4b09-af8a-315f82271388"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | 
-|                         `채팅`<br/>그룹채팅, 1:1 채팅, <br/>이미지 업로드<br/> `알림`<br/>댓글, 대댓글, 채팅 알림<br/>`서버 배포 및 관리`                         |                          `CRUD`<br/>여행일정, 일정 가져오기, <br/>그룹 생성, 일정 상세 페이지<br/> `여행,명소추천 API` <br/>`서버 배포 및 관리`                          |                                  `CRUD`<br/>일행모집, 여행후기<br/>조회수, 찜, 비밀글, 검색 및 정렬<br/>`서버 배포 및 관리`                                  |                      `지도API`<br/>카카오맵 API, 마커 표시<br/>`이미지`<br/>회원, 게시글 이미지 업로드<br/>`서버 배포 및 관리`                      |              `유저 및 인증-인가 전반`<br/> 로그인, 회원가입, OAuth2, 마이페이지<br/>`관리자 페이지`<br/>회원, 게시글 관리, 공지사항 CRUD<br/>`날씨 API`<br/>`서버 배포 및 관리`              | 
+|                         `채팅`<br/>그룹채팅, 1:1 채팅, <br/>이미지 업로드<br/> `알림`<br/>댓글, 대댓글, 채팅 알림<br/>`서버 배포 및 관리`                         |                          `CRUD`<br/>여행일정, 일정 가져오기, <br/>그룹 생성, 일정 상세 페이지<br/> `여행,명소추천 API` <br/>`서버 배포 및 관리`                          |                        `CRUD`<br/>일행모집, 여행후기<br/>조회수, 찜, 좋아요, 댓글/대댓글, <br/>비밀글, 카테고리 별 검색 및 정렬<br/>`서버 배포 및 관리`                        |                      `지도API`<br/>카카오맵 API, 마커 표시<br/>`이미지`<br/>회원, 게시글 이미지 업로드<br/>`서버 배포 및 관리`                      |              `유저 및 인증-인가 전반`<br/> 로그인, 회원가입, OAuth2, 마이페이지<br/>`관리자 페이지`<br/>회원, 게시글 관리, 공지사항 CRUD<br/>`날씨 API`<br/>`서버 배포 및 관리`              | 
 
 
 ## 🚀 기술 스택
@@ -89,6 +89,46 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
 
 
 ---
+<details>
+<summary><strong>🛠 주요 기능</strong></summary>
+
+#### 🔥 유저 
+- OAuth 로그인: Google, Kakao, Naver를 이용한 소셜 로그인 지원 
+- 일반 회원가입: 이메일 인증 후 JWT를 통한 인증/인가 처리 
+- 로그인 방식에 따라 다른 사용자 정보 표시
+- 비밀번호 재설정, 비밀번호 찾기
+
+#### 🔥 여행 일정
+- 일정 관리: 일정 생성, 수정, 삭제 가능 
+- 여행 정보 입력: 제목, 여행지
+- 위치 검색: 경도, 위도, 이름 기반으로 일정 추가
+- 날짜별 마커 표시
+- 위치 기반으로 명소 추천
+
+#### 🔥 일행 모집
+- 여행 동행자 모집 기능 
+- 타 사용자는 모집 중인 플랜에 참가 요청 가능
+
+#### 🔥 일정 후기
+- 일정 후기 기능
+- 타 사용자는 일정이 마음에 든 경우 찜 및 가져오기 가능
+
+#### 🔥 마이 페이지
+- 프로필 및 개인정보 확인: 사용자의 정보 관리 및 수정
+- 일정 관리: 참여/생성한 일정, 찜 목록, 게시글 작성 목록
+- 회원탈퇴 기능 지원
+- 이미지 업로드
+
+#### 🔥 알림
+- 서버 이벤트 기반 자동 알림 발행 
+- 사용자 초대 알림 
+- 일정 관련 알림: 댓글, 대댓글, 채팅 알림
+
+#### 🔥 채팅 기능
+- 개인/그룹 채팅 지원
+
+</details>
+
 
 ## 🌉 화면 구성
 
@@ -103,52 +143,52 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
 ### 🏷️ 유저 관리
 |                                 **회원 가입**                                 |                                  **로그인**                                  |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_35.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_34.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_35.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_34.png" width="500px" height="300px"/> |
 
 |                              **회원가입 인증 이메일**                              |                              **비밀번호 찾기 이메일**                              |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_37.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_36.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_37.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_36.png" width="500px" height="300px"/> |
 
 |                                **비밀번호 찾기**                             |                               **비밀번호 재설정**                                |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_27.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_23.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_27.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_23.png" width="500px" height="300px"/> |
 
 ### 🏷️ 여행계획 짜기
 |                               **시도, 구군 검색**                               |                                 **마커 표시**                                 |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_30.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_31.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_30.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_31.png" width="500px" height="300px"/> |
 
 ### 🏷️ 여행정보 공유
 |                               **일행 모집 게시글**                           |                               **여행 후기 게시글**                               |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_32.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_33.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_32.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_33.png" width="500px" height="300px"/> |
 
 ### 🏷️ 내 프로필
 
 |                                 **나의 여행 관리**                           |                                **프로필 수정**                                 |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_11.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_15.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_11.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_15.png" width="500px" height="300px"/> |
 
 ### 🏷️ 채팅 및 알림
 
 |                                   **채팅**                                    |                                   **알림**                                   |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_16.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_17.png" width="50%"/> |
+| <img src="src/main/resources/static/readmeImage/img_16.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_17.png" width="500px" height="300px"/> |
 
 ### 🏷️ 관리자 페이지
 |                                **사용자 목록**                                 |                                  **게시글 목록**                                   |                                    **공지사항**                                     |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| <img src="src/main/resources/static/readmeImage/img_20.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_21.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_22.png" width="50%"/>   |
+| <img src="src/main/resources/static/readmeImage/img_20.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_21.png" width="500px" height="300px"/> | <img src="src/main/resources/static/readmeImage/img_22.png" width="500px" height="300px"/>   |
 
 
 </div>
 
 ---
 
-## ⭐ 필수 설치 과정
+## ⌨️ 설치 및 실행 방법
 
 <details>
-<summary><strong>필수 설치 과정</strong></summary>
+<summary><strong>설치 및 실행 방법</strong></summary>
 
 ### 필수 설치 도구
 
