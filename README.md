@@ -1,81 +1,154 @@
-# OMG (Oh My Guide)
-- omg 접속 주소 : http://43.202.189.185:8080/
+# [✈️ OMG (Oh My Guide)](https://youtu.be/vrL-VPoE8to)
 
-## 팀 소개 (Team)
+- omg 접속 : [OMG Link](http://43.202.189.185:8080/)
 
-## 👨‍👨‍👦‍👦 팀원
+## 프로젝트 개요
+> 사용자가 **여행을 계획**하고 **동행자를 모집**하며, **여행 후기를 공유**할 수 있는 종합 여행 지원 플랫폼입니다.
+- **Convention**: 📑[Coding Convention](https://github.com/oh-my-guide/OMG_project/wiki/Coding-Convention)
+- **그라운드 룰** 📑[Team Rule](https://github.com/oh-my-guide/OMG_project/wiki/Team-Rule)
 
-|                                               [전현진](https://github.com/HyeonJinJeon)                                                |                                                    [곽유진](https://github.com/jinijavac)                                                     |                                                    [손설빈](https://github.com/seolbb)                                                     |                                          [김혜주](https://github.com/kimoju01)                                          |                                                    [박경서](https://github.com/kyongseo)                                                     |
+
+## 🧑‍🤝‍🧑 팀원 소개
+
+|                                              [전현진](https://github.com/HyeonJinJeon)                                               |                                                [곽유진](https://github.com/jinijavac)                                                |                                                 [손설빈](https://github.com/seolbb)                                                  |                                          [김혜주](https://github.com/kimoju01)                                          |                                                [박경서](https://github.com/kyongseo)                                                 |
 |:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|
 | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="150" height="150" src="https://github.com/user-attachments/assets/8d5bb1bb-d84f-4b09-af8a-315f82271388"> | <img width="150" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | 
-|                                                                팀장                                                                 |                                                                팀원                                                                 |                                                                팀원                                                                 |                                                     카페인 대신 초콜릿🍫                                                     |                                                                팀원                                                                 | 
+|                         `채팅`<br/>그룹채팅, 1:1 채팅, <br/>이미지 업로드<br/> `알림`<br/>댓글, 대댓글, 채팅 알림<br/>`서버 배포 및 관리`                         |                          `CRUD`<br/>여행일정, 일정 가져오기, <br/>그룹 생성, 일정 상세 페이지<br/> `여행,명소추천 API` <br/>`서버 배포 및 관리`                          |                                  `CRUD`<br/>일행모집, 여행후기<br/>조회수, 찜, 비밀글, 검색 및 정렬<br/>`서버 배포 및 관리`                                  |                      `지도API`<br/>카카오맵 API, 마커 표시<br/>`이미지`<br/>회원, 게시글 이미지 업로드<br/>`서버 배포 및 관리`                      |              `유저 및 인증-인가 전반`<br/> 로그인, 회원가입, OAuth2, 마이페이지<br/>`관리자 페이지`<br/>회원, 게시글 관리, 공지사항 CRUD<br/>`날씨 API`<br/>`서버 배포 및 관리`              | 
 
 
+## 🚀 기술 스택
 
-**목차**
+OS | Stack
+--- | --- |
+Language | ![Java](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white) ![Spring](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
+IDE | ![intellij-idea](https://img.shields.io/badge/intellij%20idea-000000?style=for-the-badge&logo=intellijidea&logoColor=white) 
+Framework | ![Spring](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+Build Tool | ![gradle](https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white) ![tomcat](https://img.shields.io/badge/apachetomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white)
+Database | ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-FF4438?style=for-the-badge&logo=redis&logoColor=white)
+Library | ![Spring Security](https://img.shields.io/badge/spring%20security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![Thymeleaf](https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white) ![OAuth 2.0 Client](https://img.shields.io/badge/OAuth%202.0%20Client-4b4b4b?style=for-the-badge) ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=jpa&logoColor=white) ![Java Mail](https://img.shields.io/badge/Java%20Mail-3a75b0?style=for-the-badge)  ![Web Socket](https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+API |  ![google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white) ![naver](https://img.shields.io/badge/naver-03C75A?style=for-the-badge&logo=naver&logoColor=white) ![kakao](https://img.shields.io/badge/kakao-FFCD00?style=for-the-badge&logo=kakao&logoColor=white) ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+DevOps | ![Amazon Web Services](https://img.shields.io/badge/amazon%20aws-232F3E?style=for-the-badge&logo=Amazon%20Web%20Services&logoColor=white) ![amazon s3](https://img.shields.io/badge/amazon%20s3-569A31?style=for-the-badge&logo=amazon%20s3&logoColor=white) ![amazon rds](https://img.shields.io/badge/amazon%20rds-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white) ![gitAction](https://img.shields.io/badge/gitAction-D24939?style=for-the-badge&logo=jenkins&logoColor=white)  ![amazon ec2](https://img.shields.io/badge/amazon%20ec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)
+Tools | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white) ![git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white) ![slack](https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) ![notion](https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white)  ![discord](https://img.shields.io/badge/discord-5865F2?style=for-the-badge&logo=discord&logoColor=white) ![figma](https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) 
+Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 
-1. [프로젝트 개요 (Overview)](#프로젝트-개요-overview)
-2. [기술 스택 (Tech Stack)](#기술-스택-tech-stack)
-3. [설치 및 실행 방법 (Installation & Setup)](#설치-및-실행-방법-installation--setup)
-4. [주요 기능 (Features)](#주요-기능-features)
-5. [프로젝트 구조 (Project Structure)](#프로젝트-구조-project-structure)
-6. [데모 (Demo)](#데모-demo)
-7. [테스트 (Testing)](#테스트-testing)
-8. [기여 방법 (Contributing)](#기여-방법-contributing)
-9. [라이선스 (License)](#라이선스-license)
-10. [문제 해결 (Troubleshooting) 및 FAQ](#문제-해결-troubleshooting-및-faq)
-11. [향후 계획 (Future Work)](#향후-계획-future-work)
-12. [기타 참고 자료 (Additional Resources)](#기타-참고-자료-additional-resources)
+<details>
+<summary><strong>🎊기술 & 라이브러리 사용 이유</strong></summary>
+<div markdown="1">   
+  <br/>
+
+
+  <details>
+  <summary><strong> RDS - MySQL</strong></summary>
+    <div markdown="1">     
+
+    1. 프로젝트 전 MySQL을 미리 학습한 경험이 있어 다른 DB보다 빠르게 프로젝트에 적용이 가능하기 때문에 선택했습니다
+    2. 현업에서 MySQL의 점유율 높기 때문에 레퍼런스를 찾기 쉬웠습니다.
+
+
+  </details>
+
+  <details>
+  <summary><strong> Redis</strong></summary>
+    <div markdown="1">
+
+    1. AWS 아키텍처로 구성된 프로젝트에서 최적화된 서비스와 팀 프로젝트 환경에서 효과적인 모니터링을 위해서 AWS 클라우드 제품을 사용했습니다.
+    2. 다양한 데이터 타입과 영속화가 필요했습니다.
+    3. 자동으로 만료되는 데이터를 다룰 수 있어 캐시 시스템으로 이상적입니다. 이를 통해 데이터의 유효성을 관리하고 불필요한 메모리 사용을 줄일 수 있었습니다.
+
+  </details> 
+
+  <details>
+  <summary><strong> APACHE - KAFKA</strong></summary>
+    <div markdown="1">     
+
+    1. 초당 수백막 건의 데이터를 처리할 수 있어 실시간 데이터 처리에 적합합니다.
+    2. Pub/Sub기반으로 느슨한 처리가 가능해 확장성과 유연성이 뛰어납니다
+    3. 메시지를 저장해 데이터 손실 방지 기능을 제공합니다
+
+  </details> 
+
+
+  <details>
+  <summary><strong> Git Action</strong></summary>
+    <div markdown="1">     
+
+    1. 다양한 플러그인을 제공하여 빌드, 테스트, 배포, 모니터링 등 다양한 작업을 지원합니다
+    2. 높은 유연성과 확장성을 제공하여 특정 요구에 맞게 파이프라인을 구성하고 자동화할 수 있습니다.
+    3. 빌드 상태에 대한 알림 기능을 제공하며, 이벤트에 대한 알림을 설정하여 정보를 실시간으로 전달합니다.
+
+  </details> 
+
+
+</div>
+</details>
+</br>
+
+
+## 📁 배포 CI/CD 아키텍처
+<img src="src/main/resources/static/readmeImage/img_38.png" width=500; width=300 />
+
+
 ---
 
-## 프로젝트 개요 (Overview)
+## 🌉 화면 구성
 
-OMG(Oh My Guide)는 사용자가 **여행을 계획**하고 **동행자를 모집**하며, **여행 후기를 공유**할 수 있는 종합 여행 지원 플랫폼입니다. 이 프로젝트는 사용자에게 맞춤형 여행 일정을 제공하고, 실시간 소통 기능을 통해 보다 원활하고 즐거운 여행 경험을 제공하도록 설계되었습니다.
+<div align="center">
 
-- **문제 정의**:
+### 🏷️ Main
+|                                **메인 페이지**                                |
+|:------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_1.png" width="50%"/> |
 
-  여행을 계획하는 과정은 복잡하고 시간 소모적입니다. 또한, 동행자를 찾고 함께 소통하는 것 또한 쉽지 않습니다. 여행 후기를 나누는 과정에서도 정보의 교류가 제한적일 수 있습니다.
 
-- **해결 방안**:
+### 🏷️ 유저 관리
+|                                 **회원 가입**                                 |                                  **로그인**                                  |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_35.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_34.png" width="50%"/> |
 
-  OMG는 사용자의 개인화된 여행 일정을 제안하고, 동행자를 모집할 수 있는 기능을 제공합니다. 또한, 실시간 채팅 및 커뮤니티 기능을 통해 사용자들이 여행 후기를 쉽게 공유하고 소통할 수 있도록 지원합니다.
+|                              **회원가입 인증 이메일**                              |                              **비밀번호 찾기 이메일**                              |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_37.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_36.png" width="50%"/> |
 
+|                                **비밀번호 찾기**                             |                               **비밀번호 재설정**                                |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_27.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_23.png" width="50%"/> |
+
+### 🏷️ 여행계획 짜기
+|                               **시도, 구군 검색**                               |                                 **마커 표시**                                 |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_30.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_31.png" width="50%"/> |
+
+### 🏷️ 여행정보 공유
+|                               **일행 모집 게시글**                           |                               **여행 후기 게시글**                               |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_32.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_33.png" width="50%"/> |
+
+### 🏷️ 내 프로필
+
+|                                 **나의 여행 관리**                           |                                **프로필 수정**                                 |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_11.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_15.png" width="50%"/> |
+
+### 🏷️ 채팅 및 알림
+
+|                                   **채팅**                                    |                                   **알림**                                   |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_16.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_17.png" width="50%"/> |
+
+### 🏷️ 관리자 페이지
+|                                **사용자 목록**                                 |                                  **게시글 목록**                                   |                                    **공지사항**                                     |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+| <img src="src/main/resources/static/readmeImage/img_20.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_21.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_22.png" width="50%"/>   |
+
+
+</div>
 
 ---
 
-## 기술 스택 (Tech Stack)
+## ⭐ 필수 설치 과정
 
-**프론트엔드**
-
-- **Thymeleaf**: 서버 사이드 템플릿 엔진으로, 동적인 HTML 콘텐츠를 생성하여 사용자에게 제공.
-
-**백엔드**
-
-- **Java**: 애플리케이션 로직 구현을 위한 주요 언어.
-- **Kafka**: 실시간 채팅 기능 구현을 위한 메시징 시스템.
-- **Redis**: 알림 기능 및 세션 관리 용도로 사용되는 인메모리 데이터베이스.
-
-**데이터베이스**
-
-- **MySQL**: 데이터 저장 및 관리 용도로 사용하는 관계형 데이터베이스 관리 시스템.
-
-**배포 및 인프라**
-
-- **Docker**: 애플리케이션 및 서비스의 컨테이너화.
-- **GithubAction**: CI/CD 파이프라인을 통한 자동화된 빌드 및 배포.
-- **Jenkins**: CI/CD 파이프라인을 통한 자동화된 빌드 및 배포.
-
-**기타**
-
-- **IntelliJ IDEA**: 개발 환경으로 사용.
-- **kakaomap API**: 여행 위치 정보 제공.
-- **Tour API**: 여행지 관련 정보 제공.
-- **Weather API**: 날씨 정보 제공.
-- **Channel API**: 소통 및 알림 기능 제공.
-
----
-
-## 설치 및 실행 방법 (Installation & Setup)
+<details>
+<summary><strong>필수 설치 과정</strong></summary>
 
 ### 필수 설치 도구
 
@@ -181,144 +254,5 @@ OMG(Oh My Guide)는 사용자가 **여행을 계획**하고 **동행자를 모�
     INSERT INTO roles (id, name) VALUES (2, 'ROLE_USER');
     ```
 ---
+</details>
 
-## 주요 기능 (Features)
-
-- **맞춤형 여행 일정 제공**: 사용자의 여행 선호에 맞춘 일정을 추천.
-- **여행 크루 모집**: 동행자를 모집하고 커뮤니티 기능을 통해 소통.
-- **일정 공유**: 친구나 가족과 여행 일정을 공유.
-- **여행 플래너**: 여행 일정을 계획하고 관리할 수 있는 기능 제공.
-- **여행 리뷰**: 여행 후기를 게시판에 공유하고 다른 사용자들과 소통.
-
----
-
-## 프로젝트 구조 (Project Structure)
-
-    /src                            # 소스 코드 루트 디렉토리
-    └── /domain                     # 도메인 모델 정의 관련 코드
-        ├── /config                 # 도메인 관련 설정 파일들
-        ├── /controller             # 컨트롤러 레이어 (API 엔드포인트)
-        ├── /service                # 서비스 레이어 (비즈니스 로직)
-        │   └── /impl               # 서비스 구현체
-        ├── /repository             # 데이터베이스 접근 레이어 (DAO)
-        ├── /dto                    # 데이터 전송 객체 (Data Transfer Objects)
-        └── /entity                 # 엔티티 클래스 (DB 매핑 객체)
-    
-    └── /global                     # 글로벌 설정 및 공통 유틸리티
-        ├── /config                 # 전역 설정 파일들
-        ├── /exception              # 전역 예외 처리 클래스
-        ├── /image                  # 이미지 처리 유틸리티
-        ├── /jwt                    # JWT 관련 유틸리티 및 구성
-        ├── /oauth2                 # OAuth2 관련 유틸리티 및 구성
-        └── /security               # 보안 관련 설정 및 유틸리티
-
----
-
-## 데모 (Demo)
-
-<div align="center">
-
-### 메인 페이지
-
-|<img src="src/main/resources/static/readmeImage/img_1.png" width="50%"/>|
-|:------------------------------------------------------------------------:|
-|                                  메인 페이지                                  |
-
-### 회원 가입 및 로그인
-
-|<img src="src/main/resources/static/readmeImage/img_19.png" width="50%"/>|          <img src="src/main/resources/static/readmeImage/img_18.png" width="50%"/>           |
-|:-----------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|
-|                                  회원 가입                                  |                                             로그인                                              |
-
-### 여행 일정 생성
-
-|<img src="src/main/resources/static/readmeImage/img_2.png" width="50%"/>| <img src="src/main/resources/static/readmeImage/img_10.png" width="50%"/> |
-|:----------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-|                             여행 일정 생성 방법 선택                             |                             기존 일정 참여 (초대코드)                              |
-|<img src="src/main/resources/static/readmeImage/img_3.png" width="50%"/>|<img src="src/main/resources/static/readmeImage/img_4.png" width="50%"/>|
-|                                 직접 생성                                  |                                  일정 상세                                   |
-
-### 일행 모집 및 여행 후기 게시판
-
-| <img src="src/main/resources/static/readmeImage/img_5.png" width="50%"/> |
-|:------------------------------------------------------------------------:|
-|                           일행 모집 및 여행 후기 게시글 목록                           |
-
-| <img src="src/main/resources/static/readmeImage/img_7.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_8.png" width="50%"/> |
-|:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-|                             여행 후기 게시글 작성 (1)                             |                             여행 후기 게시글 작성 (2)                             |
-
-| <img src="src/main/resources/static/readmeImage/img_9.png" width="50%"/> |
-|:------------------------------------------------------------------------:|
-|                               일행 모집 게시글 작성                               |
-
-| <img src="src/main/resources/static/readmeImage/img_12.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_13.png" width="50%"/> |
-|:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-|                                여행 일정 찜하기                                 |                                   찜 목록                                   |
-
-### 마이 페이지
-
-| <img src="src/main/resources/static/readmeImage/img_11.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_15.png" width="50%"/> |
-|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-|                                 나의 여행 관리                                  |                                 회원 정보 수정                                  |
-
-### 채팅
-
-| <img src="src/main/resources/static/readmeImage/img_16.png" width="50%"/> |
-|:-------------------------------------------------------------------------:|
-|                                   팀 채팅                                    |
-
-### 알림
-
-| <img src="src/main/resources/static/readmeImage/img_17.png" width="50%"/> |
-|:-------------------------------------------------------------------------:|
-|                                   댓글 알림                                   |
-
-### 관리자 페이지
-
-| <img src="src/main/resources/static/readmeImage/img_20.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_21.png" width="50%"/> | <img src="src/main/resources/static/readmeImage/img_22.png" width="50%"/>   |
-|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-|                                  사용자 목록                                   |                                  게시글 목록                                   |                                    공지사항                                     |
-
-
-</div>
-
----
-
-## 기여 방법 (Contributing)
-
-- **브랜치 생성**: 📑[Branch Convention](https://github.com/oh-my-guide/OMG_project/wiki/Branch-Convention)
-- **이슈 제출**: 📑[Issue Convention](https://github.com/oh-my-guide/OMG_project/wiki/Issue-Convention)
-- **Pull Request (PR) 작성**: 📑[PR Convention](https://github.com/oh-my-guide/OMG_project/wiki/PR-Convention)
-- **코드 스타일 가이드**: 📑[Coding Convention](https://github.com/oh-my-guide/OMG_project/wiki/Coding-Convention)
-
----
-
-## 문제 해결 (Troubleshooting) 및 FAQ
-
-- **자주 발생하는 문제**:
-    - Docker 컨테이너가 시작되지 않는 경우: Docker 로그를 확인하고 필요한 설정을 검토하세요.
-    - MySQL 연결 문제: 데이터베이스 설정과 사용자 인증 정보를 확인하세요.
-- **FAQ**:
-    - **Q**: 프로젝트를 실행하는데 필요한 필수 소프트웨어는 무엇인가요?**A**: Java 21, Docker, MySQL, Redis, Kafka가 필요합니다.
-    - **Q**: 오류가 발생했을 때 어떻게 해결하나요?**A**: 오류 로그를 확인하고 문제를 추적하세요. 필요시 GitHub Issues를 통해 도움을 요청할 수 있습니다.
-
----
-
-## 향후 계획 (Future Work)
-
-- **추가 기능 개발**: 새로운 여행지 추천 기능 및 사용자 리뷰 분석 알고리즘 개선.
-- **성능 최적화**: 실시간 채팅 기능의 성능 향상 및 확장성 개선.
-- **UI/UX 개선**: 사용자 경험을 향상시키기 위한 인터페이스 개편.
-
----
-
-## 기타 참고 자료 (Additional Resources)
-
-- [Java Documentation](https://docs.oracle.com/en/java/)
-- Docker Documentation
-- Thymeleaf Documentation
-- [Kafka Documentation](https://kafka.apache.org/documentation/)
-- Redis Documentation
-
----
