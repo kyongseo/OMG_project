@@ -17,6 +17,24 @@
 | <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck2.png"> | <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck3.jpg"> | <img width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="100px" height="100px" src="https://github.com/user-attachments/assets/8d5bb1bb-d84f-4b09-af8a-315f82271388"> |                <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck.jpg">                | 
 |    `채팅`<br/>그룹채팅, 1:1 채팅, <br/>이미지 업로드<br/> `알림`<br/>댓글, 대댓글, 채팅 알림<br/>`서버 배포 및 관리`     |  `CRUD`<br/>여행일정, 일정 가져오기, <br/>그룹 생성, 일정 상세 페이지<br/> `명소추천 API` <br/>`서버 배포 및 관리`   |                        `CRUD`<br/>일행모집, 여행후기<br/>조회수, 찜, 좋아요, 댓글/대댓글, <br/>비밀글, 카테고리 별 검색 및 정렬<br/>`서버 배포 및 관리`                        |                      `지도API`<br/>카카오맵 API, 마커 표시<br/>`이미지`<br/>회원, 게시글 이미지 업로드<br/>`서버 배포 및 관리`                      | `유저 및 인증-인가`<br/> 로그인, 회원가입, OAuth2, 마이페이지<br/>`관리자 페이지`<br/>회원, 게시글 관리, <br/>공지사항 CRUD<br/>`날씨 API`<br/>`서버 배포 및 관리` | 
 
+<style>
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td, th {
+    vertical-align: top;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+</style>
+
 
 ## 🚀 기술 스택
 
