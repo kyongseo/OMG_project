@@ -22,7 +22,7 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class MailServiceImpl implements MailService {
 
@@ -31,6 +31,12 @@ public class MailServiceImpl implements MailService {
     private final JavaMailSender javaMailSender; // JAVAMailSender 를 주입받아 이메일 전송 가능
     private static final String senderEmail = "ch9800113@gmail.com";
     private static final Map<String, Integer> verificationCodes = new HashMap<>();
+
+    public MailServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, JavaMailSender javaMailSender) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.javaMailSender = javaMailSender;
+    }
 
     /**
      * 회원 가입시 인증 코드 자동 생성 메서드
