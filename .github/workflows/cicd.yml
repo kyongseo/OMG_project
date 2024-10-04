@@ -28,7 +28,7 @@ jobs:
           mkdir -p ./src/main/resources
           cd ./src/main/resources
           touch ./application.yml
-          echo "${{ secrets.application_YML }}" > ./application.yml
+          echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
 
       # gradle wrapper 파일에 실행 권한을 부여
       - name: Grant execute permission for gradlew
@@ -89,3 +89,4 @@ jobs:
           script: | # 실행될 스크립트
             cd /home/ec2-user/app/OMG_project
             nohup java -jar OMG_project-0.0.1-SNAPSHOT.jar > /home/ec2-user/app/OMG_project/app.log 2>&1 &
+            
