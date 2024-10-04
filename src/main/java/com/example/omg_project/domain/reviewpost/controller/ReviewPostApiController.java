@@ -54,7 +54,7 @@ public class ReviewPostApiController {
      * 특정 사용자의 일행 게시글 전체 조회
      */
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<ReviewPostDto.Response>> getReviewPostsByUserId(@PathVariable Long userId) {
+    public ResponseEntity<List<ReviewPostDto.Response>> getReviewPostsByUserId(@PathVariable("userId") Long userId) {
         List<ReviewPostDto.Response> reviewPosts = reviewPostService.findReviewPostsByUserId(userId);
         return ResponseEntity.ok(reviewPosts);
     }
@@ -90,7 +90,7 @@ public class ReviewPostApiController {
      * 장소별 후기 조회
      */
     @GetMapping("/{postId}/placeReviews")
-    public ResponseEntity<List<PlaceReviewDto.Response>> getPlaceReviewsByPostId(@PathVariable Long postId) {
+    public ResponseEntity<List<PlaceReviewDto.Response>> getPlaceReviewsByPostId(@PathVariable("postId") Long postId) {
         List<PlaceReviewDto.Response> placeReviews = placeReviewService.findByReviewPostId(postId);
         return ResponseEntity.ok(placeReviews);
     }

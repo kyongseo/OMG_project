@@ -55,7 +55,7 @@ public class JoinPostController {
      * 게시글 상세 화면으로 이동
      */
     @GetMapping("/{postId}")
-    public String viewPost(@PathVariable Long postId, HttpServletRequest request, Model model) {
+    public String viewPost(@PathVariable("postId") Long postId, HttpServletRequest request, Model model) {
         // 게시글 가져오기
         JoinPostDto.Response post = joinPostService.findJoinPostById(postId);
         model.addAttribute("post", post);
@@ -82,7 +82,7 @@ public class JoinPostController {
      * 게시글 수정 화면으로 이동
      */
     @GetMapping("/{postId}/updatePost")
-    public String updatePost(@PathVariable Long postId, HttpServletRequest request, Model model) {
+    public String updatePost(@PathVariable("postId") Long postId, HttpServletRequest request, Model model) {
         model.addAttribute("post", joinPostService.findJoinPostById(postId));
         // 로그인한 사용자 정보 가져오기
         String accessToken = jwtTokenizer.getAccessTokenFromCookies(request);

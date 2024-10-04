@@ -19,7 +19,7 @@ public class JoinPostCommentApiController {
      * 일행 모집 댓글 등록
      */
     @PostMapping("/{postId}/comments")
-    public ResponseEntity<JoinPostCommentDto.Response> createComment(@PathVariable Long postId, @RequestBody JoinPostCommentDto.Request commentRequest) throws JsonProcessingException {
+    public ResponseEntity<JoinPostCommentDto.Response> createComment(@PathVariable("postId") Long postId, @RequestBody JoinPostCommentDto.Request commentRequest) throws JsonProcessingException {
         JoinPostCommentDto.Response comment = joinPostCommentService.createComment(postId, commentRequest.getUserId(), commentRequest);
         return ResponseEntity.ok(comment);
     }
@@ -28,7 +28,7 @@ public class JoinPostCommentApiController {
      * 일행 모집 댓글 조회
      */
     @GetMapping("/{postId}/comments")
-    public ResponseEntity<List<JoinPostCommentDto.Response>> findAllByPostId(@PathVariable Long postId) {
+    public ResponseEntity<List<JoinPostCommentDto.Response>> findAllByPostId(@PathVariable("postId") Long postId) {
         List<JoinPostCommentDto.Response> allByPostId = joinPostCommentService.findAllByPostId(postId);
         return ResponseEntity.ok(allByPostId);
     }
@@ -37,7 +37,7 @@ public class JoinPostCommentApiController {
      * 일행 모집 댓글 수정
      */
     @PutMapping("/{postId}/comments/{commentId}")
-    public ResponseEntity<JoinPostCommentDto.Response> updateComment(@PathVariable Long commentId, @RequestBody JoinPostCommentDto.Request commentRequest) {
+    public ResponseEntity<JoinPostCommentDto.Response> updateComment(@PathVariable("commentId") Long commentId, @RequestBody JoinPostCommentDto.Request commentRequest) {
         JoinPostCommentDto.Response updateComment = joinPostCommentService.updateComment(commentId, commentRequest);
         return ResponseEntity.ok(updateComment);
     }
@@ -46,7 +46,7 @@ public class JoinPostCommentApiController {
      * 일행 모집 댓글 삭제
      */
     @DeleteMapping("/{postId}/comments/{commentId}")
-    public ResponseEntity<Void> deleteComment(@PathVariable Long commentId) {
+    public ResponseEntity<Void> deleteComment(@PathVariable("commentId") Long commentId) {
         joinPostCommentService.deleteComment(commentId);
         return ResponseEntity.noContent().build();
     }

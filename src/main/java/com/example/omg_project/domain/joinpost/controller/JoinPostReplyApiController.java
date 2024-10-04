@@ -19,7 +19,7 @@ public class JoinPostReplyApiController {
      * 일행 모집 대댓글 등록
      */
     @PostMapping("/{commentId}/replies")
-    public ResponseEntity<JoinPostReplyDto.Response> createReply(@PathVariable Long commentId, @RequestBody JoinPostReplyDto.Request replyRequest) throws JsonProcessingException {
+    public ResponseEntity<JoinPostReplyDto.Response> createReply(@PathVariable("commentId") Long commentId, @RequestBody JoinPostReplyDto.Request replyRequest) throws JsonProcessingException {
         JoinPostReplyDto.Response reply = joinPostReplyService.createReply(commentId, replyRequest.getUserId(), replyRequest);
         return ResponseEntity.ok(reply);
     }
@@ -28,7 +28,7 @@ public class JoinPostReplyApiController {
      * 일행 모집 대댓글 조회
      */
     @GetMapping("/{commentId}/replies")
-    public ResponseEntity<List<JoinPostReplyDto.Response>> findAllByCommentId(@PathVariable Long commentId) {
+    public ResponseEntity<List<JoinPostReplyDto.Response>> findAllByCommentId(@PathVariable("commentId") Long commentId) {
         List<JoinPostReplyDto.Response> allByCommentId = joinPostReplyService.findAllByCommentId(commentId);
         return ResponseEntity.ok(allByCommentId);
     }
@@ -37,7 +37,7 @@ public class JoinPostReplyApiController {
      * 일행 모집 대댓글 수정
      */
     @PutMapping("/{commentId}/replies/{replyId}")
-    public ResponseEntity<JoinPostReplyDto.Response> updateReply(@PathVariable Long replyId, @RequestBody JoinPostReplyDto.Request replyRequest) {
+    public ResponseEntity<JoinPostReplyDto.Response> updateReply(@PathVariable("replyId") Long replyId, @RequestBody JoinPostReplyDto.Request replyRequest) {
         JoinPostReplyDto.Response updateReply = joinPostReplyService.updateReply(replyId, replyRequest);
         return ResponseEntity.ok(updateReply);
     }
@@ -46,7 +46,7 @@ public class JoinPostReplyApiController {
      * 일행 모집 대댓글 삭제
      */
     @DeleteMapping("/{commentId}/replies/{replyId}")
-    public ResponseEntity<Void> deleteReply(@PathVariable Long replyId) {
+    public ResponseEntity<Void> deleteReply(@PathVariable("replyId") Long replyId) {
         joinPostReplyService.deleteReply(replyId);
         return ResponseEntity.noContent().build();
     }

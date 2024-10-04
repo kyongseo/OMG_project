@@ -19,7 +19,7 @@ public class ReviewPostCommentApiController {
      * 후기 댓글 등록
      */
     @PostMapping("/{postId}/comments")
-    public ResponseEntity<ReviewPostCommentDto.Response> createComment(@PathVariable Long postId, @RequestBody ReviewPostCommentDto.Request commentRequest) throws JsonProcessingException {
+    public ResponseEntity<ReviewPostCommentDto.Response> createComment(@PathVariable("postId") Long postId, @RequestBody ReviewPostCommentDto.Request commentRequest) throws JsonProcessingException {
         ReviewPostCommentDto.Response comment = reviewPostCommentService.createComment(postId, commentRequest.getUserId(), commentRequest);
         return ResponseEntity.ok(comment);
     }
@@ -28,7 +28,7 @@ public class ReviewPostCommentApiController {
      * 후기 댓글 조회
      */
     @GetMapping("/{postId}/comments")
-    public ResponseEntity<List<ReviewPostCommentDto.Response>> findAllByPostId(@PathVariable Long postId) {
+    public ResponseEntity<List<ReviewPostCommentDto.Response>> findAllByPostId(@PathVariable("postId") Long postId) {
         List<ReviewPostCommentDto.Response> allByPostId = reviewPostCommentService.findAllByPostId(postId);
         return ResponseEntity.ok(allByPostId);
     }
@@ -37,7 +37,7 @@ public class ReviewPostCommentApiController {
      * 후기 댓글 수정
      */
     @PutMapping("/{postId}/comments/{commentId}")
-    public ResponseEntity<ReviewPostCommentDto.Response> updateComment(@PathVariable Long commentId, @RequestBody ReviewPostCommentDto.Request commentRequest) {
+    public ResponseEntity<ReviewPostCommentDto.Response> updateComment(@PathVariable("commentId") Long commentId, @RequestBody ReviewPostCommentDto.Request commentRequest) {
         ReviewPostCommentDto.Response updateComment = reviewPostCommentService.updateComment(commentId, commentRequest);
         return ResponseEntity.ok(updateComment);
     }
@@ -46,7 +46,7 @@ public class ReviewPostCommentApiController {
      * 후기 댓글 삭제
      */
     @DeleteMapping("/{postId}/comments/{commentId}")
-    public ResponseEntity<Void> deleteComment(@PathVariable Long commentId) {
+    public ResponseEntity<Void> deleteComment(@PathVariable("commentId") Long commentId) {
         reviewPostCommentService.deleteComment(commentId);
         return ResponseEntity.noContent().build();
     }

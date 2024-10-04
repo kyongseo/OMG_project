@@ -49,6 +49,7 @@ dependencies {
     // editor
     implementation 'org.jsoup:jsoup:1.14.3'
 
+
     // lombok
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'

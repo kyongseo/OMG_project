@@ -22,7 +22,7 @@ public class JoinPostLikeApiController {
      * 좋아요 상태 조회
      */
     @GetMapping("/{joinPostId}/likes")
-    public ResponseEntity<Map<String, Object>> getLikeInfo (@PathVariable Long joinPostId, Authentication authentication) {
+    public ResponseEntity<Map<String, Object>> getLikeInfo (@PathVariable("joinPostId") Long joinPostId, Authentication authentication) {
         User user = userService.findByUsername(authentication.getName()).orElseThrow();
         Map<String, Object> likeInfo = joinPostLikeService.getLikeInfo(user.getId(), joinPostId);
         return ResponseEntity.ok(likeInfo);
@@ -32,7 +32,7 @@ public class JoinPostLikeApiController {
      * 좋아요 토글
      */
     @PostMapping("/{joinPostId}/likes")
-    public ResponseEntity<Void> toggleLike(@PathVariable Long joinPostId, Authentication authentication) {
+    public ResponseEntity<Void> toggleLike(@PathVariable("joinPostId") Long joinPostId, Authentication authentication) {
         User user = userService.findByUsername(authentication.getName()).orElseThrow();
         joinPostLikeService.toggleLike(user.getId(), joinPostId);
         return ResponseEntity.ok().build();

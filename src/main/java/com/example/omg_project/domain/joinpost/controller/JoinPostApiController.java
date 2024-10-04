@@ -36,7 +36,7 @@ public class JoinPostApiController {
      * 일행 게시글 전체 조회 또는 지역별 조회
      */
     @GetMapping
-    public ResponseEntity<List<JoinPostDto.Response>> getAllJoinPosts(@RequestParam(required = false) Long cityId,
+    public ResponseEntity<List<JoinPostDto.Response>> getAllJoinPosts(@RequestParam(required = false, name = "cityId") Long cityId,
                                                                       @RequestParam(required = false) String sort) {
         List<JoinPostDto.Response> joinPosts;
         if (cityId != null) {
@@ -51,7 +51,7 @@ public class JoinPostApiController {
      * 특정 사용자의 일행 게시글 전체 조회
      */
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<JoinPostDto.Response>> getJoinPostsByUserId(@PathVariable Long userId) {
+    public ResponseEntity<List<JoinPostDto.Response>> getJoinPostsByUserId(@PathVariable("userId") Long userId) {
         List<JoinPostDto.Response> joinPosts = joinPostService.findJoinPostsByUserId(userId);
         return ResponseEntity.ok(joinPosts);
     }
@@ -87,7 +87,7 @@ public class JoinPostApiController {
      * 일행 게시글 중복 확인
      */
     @GetMapping("/checkDuplicate/{tripId}")
-    public ResponseEntity<Boolean> checkDuplicatePost(@PathVariable Long tripId) {
+    public ResponseEntity<Boolean> checkDuplicatePost(@PathVariable("tripId") Long tripId) {
         boolean exists = joinPostService.existsJoinPostByTripId(tripId);
         return ResponseEntity.ok(exists);
     }
