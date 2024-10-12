@@ -1,6 +1,6 @@
 # [✈️ OMG (Oh My Guide)](https://youtu.be/vrL-VPoE8to)
 
-- omg 접속 : [OMG Link](http://43.202.189.185:8080/)
+- omg 접속 : [OMG Link](http://ec2-3-34-181-64.ap-northeast-2.compute.amazonaws.com:8080/)
 <br/>
 
 ## 프로젝트 개요
