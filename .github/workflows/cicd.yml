@@ -73,9 +73,9 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       # 첫실행엔 주석 -> 다음 실행부터는 주석 해제 76~78
-#      - name: Kill process using port 8080
-#        run: |
-#          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "sudo lsof -t -i:8080 | xargs sudo kill -9"
+      - name: Kill process using port 8080
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "sudo lsof -t -i:8080 | xargs sudo kill -9"
 
       - name: Copy JAR file to EC2
         run: scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no build/libs/OMG_project-0.0.1-SNAPSHOT.jar ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/ec2-user/app/OMG_project/
