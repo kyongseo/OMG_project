@@ -39,3 +39,7 @@ out/
 
 # Spring Boot application configuration file
 src/main/resources/application.yml
+
+createTable.sql
+
+src/main/java/com/example/omg_project/.DS_Store

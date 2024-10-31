@@ -5,10 +5,32 @@
 
 ## 프로젝트 개요
 > 사용자가 **여행을 계획**하고 **동행자를 모집**하며, **여행 후기를 공유**할 수 있는 종합 여행 지원 플랫폼입니다.
-- **Convention**: 📑[Coding Convention](https://github.com/oh-my-guide/OMG_project/wiki/Coding-Convention)
+- **코드 스타일 가이드**: 📑[Coding Convention](https://github.com/oh-my-guide/OMG_project/wiki/Coding-Convention)
 - **그라운드 룰** 📑[Team Rule](https://github.com/oh-my-guide/OMG_project/wiki/Team-Rule)
+- **Pull Request (PR) 작성**: 📑[PR Convention](https://github.com/oh-my-guide/OMG_project/wiki/PR-Convention)
+### 프로젝트 구조 
+
+    /src                            
+    └── /domain                    
+        ├── /config                
+        ├── /controller             
+        ├── /service                
+        │   └── /impl               
+        ├── /repository             
+        ├── /dto                    
+        └── /entity                 
+    
+    └── /global                     
+        ├── /config                 
+        ├── /exception              
+        ├── /image                  
+        ├── /jwt                    
+        ├── /oauth2                 
+        └── /security               
 
 <br/>
+
+---
 
 ## 🧑‍🤝‍🧑 팀원 소개
 
@@ -17,6 +39,7 @@
 | <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck2.png"> | <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck3.jpg"> | <img width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Axa1JxoAfrkVVHgQmEI49vuREEtRJoQ9Xw&s"> | <img width="100px" height="100px" src="https://github.com/user-attachments/assets/8d5bb1bb-d84f-4b09-af8a-315f82271388"> |                <img width="100px" height="100px" src="src/main/resources/static/readmeImage/duck.jpg">                | 
 |           `채팅`<br/>그룹채팅, 이미지 업로드<br/> `알림`<br/>댓글, 대댓글, 채팅 알림<br/>`서버 배포 및 관리`           |          `CRUD`<br/>여행일정, 일정 가져오기, <br/>그룹 생성<br/> `명소추천 API` <br/>`서버 배포 및 관리`          |                         `CRUD`<br/>일행모집, 여행후기, 조회수, <br/>찜, 좋아요, 댓글/대댓글, 비밀글, <br/>카테고리 별 검색 및 정렬<br/>`서버 배포 및 관리`                         |                      `지도API`<br/>카카오맵 API, 마커 표시<br/>`이미지`<br/>회원, 게시글 이미지 업로드<br/>`서버 배포 및 관리`                      | `유저 및 인증-인가`<br/> 로그인, 회원가입, OAuth2, 마이페이지<br/>`관리자 페이지`<br/>회원, 게시글 관리, <br/>공지사항 CRUD<br/>`날씨 API`<br/>`서버 배포 및 관리` | 
 
+---
 
 ## 🚀 기술 스택
 
@@ -67,8 +90,7 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
     2. Pub/Sub기반으로 느슨한 처리가 가능해 확장성과 유연성이 뛰어납니다
     3. 메시지를 저장해 데이터 손실 방지 기능을 제공합니다
 
-  </details> 
-
+  </details>
 
   <details>
   <summary><strong> Git Action</strong></summary>
@@ -80,23 +102,24 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
 
   </details> 
 
-
 </div>
 </details>
 </br>
 
+----
 
 ## 📁 배포 CI/CD 아키텍처
 <img src="src/main/resources/static/readmeImage/img_38.png" width=500; width=300 />
 
-
 ---
+## 🌉 화면 구성
+
 <details>
 <summary><strong>🛠 주요 기능</strong></summary>
 
 #### 🔥 유저 
-- OAuth 로그인: Google, Kakao, Naver를 이용한 소셜 로그인 지원 
-- 일반 회원가입: 이메일 인증 후 JWT를 통한 인증/인가 처리 
+- OAuth 로그인 : Google, Kakao, Naver를 이용한 소셜 로그인 지원 
+- 일반 회원가입 : 이메일 인증 후 JWT를 통한 인증/인가 처리 
 - 로그인 방식에 따라 다른 사용자 정보 표시
 - 비밀번호 재설정, 비밀번호 찾기
 
@@ -116,23 +139,23 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
 - 타 사용자는 일정이 마음에 든 경우 찜 및 가져오기 가능
 
 #### 🔥 마이 페이지
-- 프로필 및 개인정보 확인: 사용자의 정보 관리 및 수정
-- 일정 관리: 참여/생성한 일정, 찜 목록, 게시글 작성 목록
+- 프로필 및 개인정보 확인 : 사용자의 정보 관리 및 수정
+- 일정 관리 : 참여/생성한 일정, 찜 목록, 게시글 작성 목록
 - 회원탈퇴 기능 지원
 - 이미지 업로드
 
 #### 🔥 알림
 - 서버 이벤트 기반 자동 알림 발행 
 - 사용자 초대 알림 
-- 일정 관련 알림: 댓글, 대댓글, 채팅 알림
+- 일정 관련 알림 : 댓글, 대댓글, 채팅 알림
 
 #### 🔥 채팅 기능
 - 개인/그룹 채팅 지원
+- 비속어 필터링 기능
 
 </details>
 
-
-## 🌉 화면 구성
+---
 
 <div align="center">
 
@@ -297,4 +320,3 @@ Messaging | ![apache kafka](https://img.shields.io/badge/apache%20kafka-231F20?s
     ```
 ---
 </details>
-
